@@ -1,0 +1,53 @@
+/* Layout for the row */
+.filters-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* THE PILL SHAPE - This makes them look like the button */
+.filter-pill, 
+.apply-btn-pill {
+  background-color: #1a1a1a; /* Match button background */
+  color: white;
+  border: 1px solid #333;
+  padding: 0 20px;           /* Horizontal padding for the pill look */
+  border-radius: 50px;       /* High value for perfect rounding */
+  height: 42px;              /* Fixed height so they align perfectly */
+  font-size: 14px;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+/* Styling for the dropdowns specifically */
+select.filter-pill {
+  appearance: none;          /* Removes default browser arrow */
+  padding-right: 35px;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 10px auto;
+}
+
+/* Styling for date inputs icon */
+.filter-pill::-webkit-calendar-picker-indicator {
+  filter: invert(1); /* Makes calendar icon white */
+  margin-left: 10px;
+}
+
+/* Hover effect to match the button */
+.filter-pill:hover,
+.apply-btn-pill:hover {
+  background-color: #222;
+  border-color: #555;
+}
+
+/* Make the Apply Button stand out slightly */
+.apply-btn-pill {
+  font-weight: 600;
+  border-color: #444;
+}
