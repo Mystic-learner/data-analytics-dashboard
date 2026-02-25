@@ -1,16 +1,129 @@
-# React + Vite
+# 📊 Data Analytics Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack MERN data analytics dashboard that visualizes product sales using interactive charts and filters.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Project Overview
 
-## React Compiler
+This project is a **Data Analytics Dashboard** built using the MERN stack. It allows users to:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* View product sales analytics
+* Filter data by date, category, and status
+* Visualize insights using multiple charts
+* Interact with a clean dark-themed UI
 
-## Expanding the ESLint configuration
+The dashboard fetches data from **MongoDB** and displays it using **Recharts**.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+
+* React (Vite)
+* Recharts
+* Axios
+* CSS (Dark theme)
+
+### Backend
+
+* Node.js
+* Express.js
+* MongoDB Atlas
+* Mongoose
+
+---
+
+## 📡 API Endpoints
+
+### 🔹 Get Analytics
+
+**GET** `/api/analytics`
+
+**Query Params (optional):**
+
+* `startDate`
+* `endDate`
+* `category`
+* `status`
+
+**Example:**
+
+```
+GET /api/analytics?category=Electronics&status=Completed
+```
+
+---
+
+## 📸 Dashboard Screenshots
+
+### 🔹 Filters
+
+![Filters](./ss/Filter.png)
+
+### 🔹 Sales by Product
+
+![Sales](./ss/Graph1.png)
+
+### 🔹 Revenue Stream
+
+![Revenue](./ss/Graph2.png)
+
+### 🔹 Performance Growth
+
+![Performance](./ss/Graph3.png)
+
+### 🔹 Category Distribution
+
+![Category](./ss/Graph4.png)
+
+### 🔹 Comprehensive View
+
+![Comprehensive](./ss/Graph5.png)
+
+---
+
+## ⚙️ Steps to Run the Project
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/Mystic-learner/data-analytics-dashboard.git
+cd data-analytics-dashboard
+```
+
+### 2️⃣ Setup Backend
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+Create a `.env` file in **backend/**:
+
+```
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+---
+
+### 3️⃣ Setup Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 👩‍💻 Author
+
+**Neha Paladugu**
+
+---
+
+⭐ If you like this project, consider giving it a star!
